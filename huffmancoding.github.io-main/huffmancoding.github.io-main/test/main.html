@@ -15,11 +15,14 @@
   <a id="downloadCompressedLink" style="display: none;">Download Compressed File</a>
 
   <!-- Decompression Section -->
-  <input type="file" id="compressedFile" accept=".huff">
-  <button onclick="decompressImage()">Decompress Image</button>
+  <!-- We don't need a file input here anymore -->
   <a id="downloadDecompressedLink" style="display: none;">Download Decompressed Image</a>
 
+  <!-- Canvases for displaying images -->
+  <h3>Original Image</h3>
   <canvas id="originalCanvas" width="300" height="300"></canvas>
+  <h3>Decompressed Image</h3>
   <canvas id="decompressedCanvas" width="300" height="300"></canvas>
 </body>
 </html>
+        
