@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improved Image Compression</title>
+  <script src="huffman.js" defer></script>
+</head>
+<body>
+  <h2>Improved Image Compression using Huffman Encoding</h2>
+
+  <!-- Image Upload and Compression -->
+  <input type="file" id="upload" accept="image/*">
+  <button onclick="compressImage()">Compress Image</button>
+  <a id="downloadCompressedLink" style="display: none;">Download Compressed File</a>
+
+  <!-- Decompression Section -->
+  <input type="file" id="compressedFile" accept=".huff">
+  <button onclick="decompressImage()">Decompress Image</button>
+  <a id="downloadDecompressedLink" style="display: none;">Download Decompressed Image</a>
+
+  <canvas id="originalCanvas" width="300" height="300"></canvas>
+  <canvas id="decompressedCanvas" width="300" height="300"></canvas>
+</body>
+</html>
