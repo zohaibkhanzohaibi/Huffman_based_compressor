@@ -1,0 +1,143 @@
+/* General styling 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    --background-color: #4B0082;
+    background-color: rgb(99,40,216);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    --background-color: #4B0082;
+    background-color: rgb(99,40,216);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* Background image properties */
+    background-image: url(''); /* Replace with the actual path to your image */
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the video cover the entire viewport */
+    z-index: -1; /* Sends the video to the background */
+    opacity: 0.6; /* Optional: Add transparency for better readability */
+}
+
+
+/*.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgb(94,33,216);
+    border-color: #E6E6FA;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}*/
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgb(94,33,216);
+    border: 2px solid #FFFFFF; /* Added white border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header h1 span {
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+header nav a {
+    color: #FFFFFF;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content styling */
+.content {
+    margin-top: 20px;
+}
+
+.text-encode-section,
+.encoded-text-section,
+.image-upload-section {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #4B0082;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+textarea:focus, input[type="file"]:focus {
+    outline: none;
+    border-color: #FFFFFF;
+}
+
+button {
+    background-color: #FFFFFF;
+    color: #4B0082;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFD700;
+}
+
+/* Encoded text output styling */
+#encoded-output {
+    background-color: #E6E6FA;
+    color: #4B0082;
+}

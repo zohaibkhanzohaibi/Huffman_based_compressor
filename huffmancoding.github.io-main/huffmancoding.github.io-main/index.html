@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Coding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="backgroundvideo.webm" type="video/mp4"> <!-- Replace with your video file -->
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <header>
+            <h1>Huffman <span>Coding</span></h1>
+            <nav>
+                <a href="#">Tool</a>
+                <a href="#">Theory</a>
+                <a href="#">About</a>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="text-encode-section">
+                <label for="text-input">Text to Encode</label>
+                <textarea id="text-input" placeholder="Write here the text to encode, or try this as a test."></textarea>
+            </div>
+            
+            <button id="encode-button">Encode</button>
+            
+            <div class="encoded-text-section">
+                <label for="encoded-output">Encoded Text</label>
+                <textarea id="encoded-output" readonly></textarea>
+            </div>
+
+            <div class="image-upload-section">
+                <label for="image-input">Upload an Image to Encode</label>
+                <input type="file" id="image-input" accept="image/*">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
