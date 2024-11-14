@@ -10,15 +10,10 @@
     <div class="container">
         <header>
             <h1>Huffman <span>Coding</span></h1>
-            <nav>
-                <a href="#">Tool</a>
-                <a href="#">Theory</a>
-                <a href="#">About</a>
-            </nav>
         </header>
 
         <!-- Navigation Buttons -->
-        <div class="nav-buttons">
+        <div id = 'nav-layout' class="nav-buttons">
             <button id="text-encoding-button">Text Encoding</button>
             <button id="file-upload-button">File Upload</button>
             <button id="image-compression-button">Image Compression</button>
@@ -27,28 +22,42 @@
         <!-- Dynamic Layouts -->
         <div id="text-layout" class="dynamic-layout">
             <h2>Text Encoding</h2>
-            <textarea id="text-input" placeholder="Write text here to encode..."></textarea>
-            <button id="encode-button">Encode</button>
-            <textarea id="encoded-output" placeholder="Encoded text will appear here..." readonly></textarea>
+            <textarea id="text-input" rows = 5 placeholder="Write text here to encode..."></textarea>
+            <button id="text-encode-button">Encode</button>
+            <div class = "encoded-output">
+                <textarea id="encoded-text" row = 5 style = "display: none;" placeholder="Encoded text will appear here..." readonly></textarea>
+                <textarea id="encoded-codes" row = 5 style = "display: none;" placeholder="Encoded codes will appear here..." readonly></textarea>
+            </div>
         </div>
 
         <div id="file-layout" class="dynamic-layout">
             <h2>File Upload & Encoding</h2>
-            <input type="file" id="file-input">
-            <button id="file-encode-button">Encode File</button>
-            <p id="file-info">No file selected.</p>
-            <textarea id="file-encoded-output" placeholder="Encoded file data will appear here..." readonly></textarea>
-            <button id="file-decode-button" style="display: none;">Decode File</button>
+            <p>Note: Upload .txt file to encode or .huff to decode</p>
+            <input type="file" id="file-input" accept=".txt,.huff">
+            <div class="nav-buttons">
+                <button id="file-encode-button">Encode File</button>
+                <button id="file-decode-button">Decode File</button>
+            </div>
+            <div id = 'compression-ratio' style="display: none;">
+                <h3 id = 'size'>Original Size: <span id = 'orginal'>500kb</span></h3>
+                <h3 id = 'size'>Compressed Size: <span id = 'compressed'>80kb</span></h3>
+                <h3 id = 'size'>Compression ratio: <span>80kb</span></h3>
+            </div>
             <button id="download-encoded-file" style="display: none;">Download Encoded File</button>
+            <button id="download-decoded-file" style="display: none;">Download Decoded File</button>
+
         </div>
 
         <div id="image-layout" class="dynamic-layout">
             <h2>Image Compression</h2>
             <input type="file" id="image-input" accept="image/*">
             <button id="image-encode-button">Compress Image</button>
-            <p id="image-info">No image selected.</p>
-            <canvas id="image-preview" width="400" height="400"></canvas>
-            <button id="image-decode-button" style="display: none;">Decode Image</button>
+            <canvas id="image-preview" style="display: none;" width="400" height="400"></canvas>
+            <div id = 'image-compression-ratio' style="display: none;">
+                <h3 id = 'size'>Original Size: <span id = 'orginal'>500kb</span></h3>
+                <h3 id = 'size'>Compressed Size: <span id = 'compressed'>80kb</span></h3>
+                <h3 id = 'size'>Compression ratio: <span>80kb</span></h3>
+            </div>
             <button id="download-encoded-image" style="display: none;">Download Compressed Image</button>
         </div>
     </div>
@@ -65,18 +74,19 @@
         background-color: #4B0082;
         color: #FFFFFF;
         display: flex;
-        justify-content: center;
+        justify-content:center;
         align-items: center;
         min-height: 100vh;
     }
     .container {
         width: 80%;
-        max-width: 1000px;
+        max-width: 800px;
         padding: 20px;
         background-color: #6030d8;
-        border-radius: 8px;
+        border: 2px solid #FFFFFF;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         text-align: center;
+        border-radius: 8px;
     }
 
     header h1 {
@@ -103,7 +113,7 @@
     .nav-buttons {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .nav-buttons button {
@@ -114,7 +124,7 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        width: 200px;
+        width: 300px;
         margin: 0 10px;
     }
 
@@ -135,7 +145,7 @@
     }
 
     textarea, input[type="file"] {
-        width: 100%;
+        width: 90%;
         padding: 10px;
         margin-bottom: 10px;
         font-size: 1em;

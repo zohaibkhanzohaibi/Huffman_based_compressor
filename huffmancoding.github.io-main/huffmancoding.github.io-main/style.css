@@ -10,9 +10,11 @@ body {
 }
 .container {
     width: 80%;
-    max-width: 1000px;
+    height: 100%;
+    max-width: 800px;
     padding: 20px;
     background-color: #6030d8;
+    border: 2px solid #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -26,6 +28,10 @@ header h1 {
 header h1 span {
     color: #FFD700;
     font-style: italic;
+}
+
+h3 span{
+    color:lightcyan;
 }
 
 nav a {
@@ -60,7 +66,7 @@ h2 {
 textarea, input[type="file"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1em;
     color: #4B0082;
     background-color: #FFFFFF;
@@ -81,7 +87,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    width: 120%;
 }
 
 button:hover {
@@ -107,3 +113,34 @@ button:hover {
     max-width: 100%;
     height: auto;
 }
+
+#text-encode-button,
+#file-encode-button,
+#image-encode-button,
+#download-encoded-file,
+#download-encoded-image,
+#file-decode-button,
+#download-decoded-file{
+    background-color: #FFD700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width :fit-content !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+.encoded-output{
+    display: flex;
+    justify-content: center;
+}
+
+#encoded-text{
+    width:200%;
+    margin-right: 4px;
+}
+
+
+
+
